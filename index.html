@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOP 10 KILLER AI TOOLS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #FDF6F0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation Styles */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 0;
+        }
+
+        .logo img {
+            max-width: 200px;
+            height: auto;
+        }
+
+        .get-started {
+            background-color: #FF4F01;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .get-started:hover {
+            background-color: #e64601;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section Styles */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            padding: 32px 0 64px;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            color: #ff6600;
+        }
+
+        .hero p {
+            color: #ff6600;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .explore-now {
+            background-color: #FF4F01;
+            color: white;
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .explore-now:hover {
+            background-color: #e64601;
+            transform: translateY(-2px);
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+            height: 400px; /* Ensure enough height for the Spline model */
+            border-radius: 50%;
+            border-color: "#ff6600";
+            border-width: 3px;
+            overflow: hidden;
+        }
+
+        #canvas3d {
+            width: 100%;
+            height: 100%;
+            display: block;
+            border-radius: 50%;
+            border-color: "#ff6600";
+            overflow: hidden;
+            border-width: 3px;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 50%;
+            border-color: "#ff6600";
+            overflow: hidden;
+            border-width: 3px;
+        }
+
+        /* AI Tools List Styles */
+        .ai-tools {
+            background-color: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-top: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        .ai-tools h2 {
+            font-size: 36px;
+            margin-bottom: 24px;
+            text-align: center;
+            color: #333;
+        }
+
+        .tools-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .tool-item {
+            background-color: #f8f8f8;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .tool-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .tool-item a {
+            color: #FF4F01;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .tool-item a:hover {
+            color: #e64601;
+        }
+        #background-spline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    z-index: -1; /* Send it behind all content */
+}
+.gola{
+    border-color: #ff6600;
+    border-width: 100px;
+    z-index: 5;
+}
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .tools-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <spline-viewer id="background-spline" url="https://prod.spline.design/yORJy0JcMSxi-4VN/scene.splinecode"></spline-viewer>
+    <div class="container">
+        <nav>
+            <a href="#" class="logo"><img src="Main logo.png" alt="AI Tools Logo"></a>
+            <a href="https://roboticsir.in/" class="get-started">VISIT OUR WEBSITE</a>
+        </nav>
+
+        <div class="hero">
+            <div class="hero-content">
+                <h1>TOP 10 KILLER AI TOOLS</h1>
+                <p>Explore the power of AI and discover the top 10 killer AI tools that will revolutionize your business.</p>
+                <div class="hero-buttons">
+                    <a href="#ai-tools" class="explore-now">Explore Now</a>
+                </div>
+            </div>
+            <div class="gola">
+            <div class="hero-image">
+                <div class="image-container">
+                    
+<spline-viewer class="gola" url="https://prod.spline.design/15Up8UMosUThLYrb/scene.splinecode"></spline-viewer>
+                </div>
+                
+            </div></div>
+        </div>
+
+        <div id="ai-tools" class="ai-tools">
+            <h2>Top 10 Killer AI Tools</h2>
+            <div class="tools-list">
+                <div class="tool-item">
+                    <a href="https://www.udio.com/" target="_blank">Udio AI</a>
+                </div>
+                <div class="tool-item">
+                    <a href="https://leonardo.ai/" target="_blank">Leonardo AI</a>
+                </div>
+                <div class="tool-item">
+                    <a href="https://gamma.app/" target="_blank">Gamma AI</a>
+                </div>
+                <div class="tool-item">
+                    <a href="https://looka.com/" target="_blank">Looka AI</a>
+                </div>
+                <div class="tool-item">
+                    <a href="https://playground.com/design" target="_blank">Playground AI</a>
+                </div>
+                <div class="tool-item">
+                    <a href="https://texttohandwriting.com/" target="_blank">Text to Handwriting</a>
+                </div>
+                <div class="tool-item">
+                    <a href="https://app.careerflow.ai/dashboard" target="_blank">Careerflow AI</a>
+                </div>
+                <div class="tool-item">
+                    <a href="https://www.viggle.ai/" target="_blank">Viggle AI</a>
+                </div>
+                <div class="tool-item">
+                    <a href="https://www.decohere.ai/" target="_blank">Decohere AI</a>
+                </div>
+                <div class="tool-item">
+                    <a href="https://invideo.io/make/ai-video-generator/" target="_blank">Invideo AI</a>
+                </div>
+                </div>
+        </div>
+    </div>
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const exploreButton = document.querySelector('.explore-now');
+            const aiToolsSection = document.getElementById('ai-tools');
+    
+            exploreButton.addEventListener('click', (event) => {
+                event.preventDefault(); // Prevent default anchor behavior
+                aiToolsSection.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to the section
+                aiToolsSection.style.display = 'block'; // Ensure the section is visible
+            });
+        });
+        
+    </script>
+    <script type="module">
+        import { Application } from '@splinetool/runtime';
+
+        const canvas = document.getElementById('canvas3d');
+        const app = new Application(canvas);
+        app.load('https://prod.spline.design/15Up8UMosUThLYrb/scene.splinecode');
+    </script>
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.54/build/spline-viewer.js"></script>
+    
+</body>
+</html>
